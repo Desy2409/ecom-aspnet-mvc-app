@@ -12,11 +12,11 @@ namespace eTickets.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Primary key of Actor_Movie
+            // Primary key of Actor_Movie : combination of ActorId and MovieId.
             modelBuilder.Entity<Actor_Movie>().HasKey(am => new { am.ActorId, am.MovieId });
-            // Foreign key of Movie inside Actor_Movie
+            // Foreign key of Movie inside Actor_Movie.
             modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Movie).WithMany(am => am.Actors_Movies).HasForeignKey(m => m.MovieId);
-            // Foreign key of Actor inside Actor_Movie
+            // Foreign key of Actor inside Actor_Movie.
             modelBuilder.Entity<Actor_Movie>().HasOne(a => a.Actor).WithMany(am => am.Actors_Movies).HasForeignKey(a => a.ActorId);
 
             base.OnModelCreating(modelBuilder);
