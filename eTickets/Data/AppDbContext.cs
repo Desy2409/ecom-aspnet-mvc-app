@@ -1,4 +1,5 @@
-﻿using eTickets.Models;
+﻿using eTickets.Data.Seeders;
+using eTickets.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace eTickets.Data
@@ -18,7 +19,7 @@ namespace eTickets.Data
             modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Movie).WithMany(am => am.Actors_Movies).HasForeignKey(m => m.MovieId);
             // Foreign key of Actor inside Actor_Movie.
             modelBuilder.Entity<Actor_Movie>().HasOne(a => a.Actor).WithMany(am => am.Actors_Movies).HasForeignKey(a => a.ActorId);
-
+            
             base.OnModelCreating(modelBuilder);
         }
 

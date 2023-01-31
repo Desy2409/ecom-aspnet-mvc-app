@@ -1,11 +1,15 @@
 using eTickets.Data;
+using eTickets.Data.Seeders;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
 // Added by Desy : DbContext configuration.
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// End Added by Desy : DbContext configuration.
 
 builder.Services.AddControllersWithViews();
 
@@ -29,5 +33,9 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+// Seeders
+DatabaseSeeder.Seed(app);
 
 app.Run();
