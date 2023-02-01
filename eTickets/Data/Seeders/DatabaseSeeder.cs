@@ -16,6 +16,8 @@
             ProducerSeeder.Seed(applicationBuilder);
             //Cinemas seeder.
             CinemaSeeder.Seed(applicationBuilder);
+            //Movies seeder
+            MovieSeeder.Seed(applicationBuilder);
 
 
         }

@@ -18,7 +18,7 @@ namespace eTickets.Models
         public DateTime EndDate { get; set; }
         [Display(Name="Price")]
         public decimal Price { get; set; }
-        [Display(Name="Image URL")]
+        [Display(Name="Movie Image")]
         public string ImageURL { get; set; }
         public MovieCategory MovieCategory { get; set; }
 
@@ -34,5 +34,7 @@ namespace eTickets.Models
         // public int ProducerId { get; set; } == [ForeignKey("ProducerId")]
         [ForeignKey("ProducerId")]
         public Producer Producer { get; set; }
+        public int CinemaId { get; internal set; }
+        public int ProducerId { get; internal set; }
     }
 }

@@ -26,7 +26,7 @@ namespace eTickets.Data.Seeders
                         new Actor
                         {
                             //Id = 2,
-                            ProfilePictureURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoVV2UQQBjh058HmWraMz8jPiTA-Vdz91cmcEXDrMThTEUvXfJulBWDXNVMkQIKsN7-R8&usqp=CAU",
+                            ProfilePictureURL = "https://www.ecranlarge.com/media/cache/1600x1200/uploads/image/000/968/dlw6prw9hwydsirxnofytyhpsny-073.jpg",
                             FullName = "Samuel L. Jackson",
                             Bio = "Samuel Leroy Jackson entre au Morehouse College d'Atlanta pour entreprendre des études de policier qui furent très vite interrompues. " +
                             "Il continua en hôtellerie restauration, son rêve était d’avoir un complexe de chambres d’hôtes, des horizons de champs de vignes, " +
@@ -35,7 +35,7 @@ namespace eTickets.Data.Seeders
                         new Actor
                         {
                             //Id = 3,
-                            ProfilePictureURL = "https://fr.web.img4.acsta.net/r_1280_720/pictures/17/02/08/16/50/452749.jpg",
+                            ProfilePictureURL = "https://swashvillage.org/storage/img/images_1/will-smith-biography_2.jpg",
                             FullName = "Will smith",
                             Bio = "Willard Carroll Smith, Jr.8 naît à Philadelphie. Sa mère Caroline (née Bright) travaille dans une école et son père Willard Carroll Smith Sr. est technicien. " +
                             "Il reçoit une éducation baptiste9. Ses parents se séparent quand il a treize ans9,10. Il a une sœur, plus âgée de quatre ans, " +
@@ -52,7 +52,7 @@ namespace eTickets.Data.Seeders
                         new Actor
                         {
                             //Id = 5,
-                            ProfilePictureURL = "https://resize-lejdd.lanmedia.fr/var/jdd/public/media/image/2022/07/21/10/chris-pratt-l-homme-qui-murmurait-a-l-oreille-des-dinosaures.jpg?VersionId=CIiSQtmxcy4H8C9TR5Cz70i9iI7G6adQ",
+                            ProfilePictureURL = "https://resizing.flixster.com/dpI-g-9p6W_Nlhc2f0-cwEmM00Q=/218x280/v2/https://flxt.tmsimg.com/assets/249381_v9_bb.jpg",
                             FullName = "Chris Pratt",
                             Bio = "Chris Pratt naît en juin 1979, à Virginia dans le Minnesota. " + "Il est l’enfant de Kathleen Louise (née Indahl), qui travaillait dans un des supermarchés Safeway, " +
                             "et de Daniel Clifton « Dan » Pratt, décédé en 2014, qui a travaillé dans les mines puis dans les rénovations de maisons3,4,5. " +

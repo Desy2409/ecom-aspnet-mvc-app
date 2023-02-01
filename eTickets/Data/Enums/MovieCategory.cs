@@ -8,6 +8,7 @@
         Horreur,
         Epouvante,
         Enfants,
-        Documentaire
+        Documentaire,
+        Famille
     }
 }
