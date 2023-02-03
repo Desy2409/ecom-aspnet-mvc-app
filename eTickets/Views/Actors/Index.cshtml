@@ -27,14 +27,17 @@
                         <td class="col-md-2 align-middle">@Html.DisplayFor(modelItem => item.FullName)</td>
                         <td class="col-md-5 align-middle">@Html.DisplayFor(modelItem => item.Bio)</td>
                         <td class="col-md-3 align-middle">
-                            <a class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil-square"></i> Edit</a> |
-                            <a class="btn btn-sm btn-outline-info"><i class="bi bi-eye"></i> Details</a> |
-                            <a class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i> Delete</a>
+                            <a class="btn btn-sm btn-outline-primary" asp-controller="Actors" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i> Edit</a> |
+                            <a class="btn btn-sm btn-outline-info" asp-controller="Actors" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye"></i> Details</a> |
+                            <a class="btn btn-sm btn-outline-danger" asp-controller="Actors" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash"></i> Delete</a>
                             <a></a>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
+    </div>
+    <div class="col-md-2 text-white float-end mt-2">
+        <a asp-controller="Actors" asp-action="Create" class="btn btn-sm btn-success"><i class="bi bi-plus-circle"></i> Add New</a>
     </div>
 </div>

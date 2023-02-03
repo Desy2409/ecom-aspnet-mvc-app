@@ -1,5 +1,7 @@
 using eTickets.Data;
 using eTickets.Data.Seeders;
+using eTickets.Data.Services.Implementations;
+using eTickets.Data.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 
@@ -9,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Added by Desy : DbContext configuration.
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// Services onfigurations : Permettre à AutorsController d'accéder
+// à l'implementation "ActorsService" de l'interface "IActorsService".
+builder.Services.AddScoped<IActorsService, ActorsService>();
 // End Added by Desy : DbContext configuration.
 
 builder.Services.AddControllersWithViews();
