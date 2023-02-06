@@ -15,14 +15,17 @@ namespace eTickets.Data.Services.Implementations
 
         public async Task AddAsync(Actor actor)
         {
-            _context.Actors.Add(actor);  
-            await _context.SaveChangesAsync();  
+            _context.Actors.Add(actor);
+            await _context.SaveChangesAsync();
             //throw new NotImplementedException();
         }
 
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var result= await _context.Actors.FirstOrDefaultAsync(a => a.Id == id); 
+            _context.Actors.Remove(result);
+            await _context.SaveChangesAsync();
+            //throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<Actor>> GetAllAsync()

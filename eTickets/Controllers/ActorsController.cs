@@ -42,7 +42,7 @@ namespace eTickets.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var actorDetails = await _service.GetByIdAsync(id);
-            if (actorDetails == null) return View("404 | NOT FOUND !");
+            if (actorDetails == null) return View("NotFound");
             return View(actorDetails);
         }
 
@@ -50,7 +50,7 @@ namespace eTickets.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var actor = await _service.GetByIdAsync(id);
-            if (actor == null) return View("404 | NOT FOUND !");
+            if (actor == null) return View("NotFound");
             return View(actor);
         }
 
@@ -63,6 +63,24 @@ namespace eTickets.Controllers
             }
             await _service.UpdateAsync(id, actor);
             //return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
+        }
+        
+        // URL => Actors/Delete/Id
+        public async Task<IActionResult> Delete(int id)
+        {
+            var actor = await _service.GetByIdAsync(id);
+            if (actor == null) return View("NotFound");
+            return View(actor);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var actorDetails = await _service.GetByIdAsync(id);
+            if (actorDetails == null) return View("NotFound");
+            await _service.DeleteAsync(id);
+
             return RedirectToAction(nameof(Index));
         }
     }
